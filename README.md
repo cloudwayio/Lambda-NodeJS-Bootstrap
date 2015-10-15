@@ -43,15 +43,15 @@ You will see a folder named ```bootstrap```  and a readme file.
     key1: value1
     -> CONTEXT SUCEEED:  Yay :)
 
-### More
+### Developing New AWS Lambda Functions
 
-You may modify ```MyFunction.js``` and implement your own function. If you want to change function name then you will have to modify lambda.js in order to reflect the change.
+You may modify ```MyFunction.js``` and implement your own function. If you want to change file name then you will have to modify lambda.js in order to reflect the change.
 
-You can modify ```event.js``` in order to send sample events to your lambda function.
+You can modify ```event.js``` in order to send differnt events to your lambda function.
 
 Use ```npm install``` to install required modules. ```async``` module is already installed, as it is almost a must.
 
-### Packing
+### Packing and Deploying Lambda Function
 
     $ sh package.sh 
       adding: node_modules/ (stored 0%)
@@ -61,5 +61,5 @@ Use ```npm install``` to install required modules. ```async``` module is already
       adding: node_modules/async/lib/async.js (deflated 80%)
       adding: MyFunction.js (deflated 43%)
 
-This creates a ```zip``` file which can be uploaded to AWS Lambda.
+This creates a ```zip``` file which can be uploaded to AWS Lambda directly or to an S3 bucket and referenced by your lambda function.
 
