@@ -33,7 +33,7 @@ You will see a folder named ```bootstrap```  and a readme file.
     $ ls
     context.js  event.js  lambda.js  MyFunction.js  node_modules  package.sh
 
-Run ```lambda.js``` which wraps lambda function which is implemented in ```MyFunction.js``` and passes ```context``` and ```event``` objects.
+Run ```lambda.js``` which wraps lambda function implemented in ```MyFunction.js``` and passes ```context``` and ```event``` objects.
 
     $ node lambda.js 
     Loading Lambda Function (v1234)
