@@ -17,6 +17,6 @@ exports.handler = function(event, context) {
     if (true) {
         context.succeed("Yay :)");
     } else {
-        context.fail("Nay :(")
+        context.fail("Nay :(");
     }
 };
