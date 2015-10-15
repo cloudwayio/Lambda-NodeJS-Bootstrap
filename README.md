@@ -1,11 +1,14 @@
-## N steps to have a local Lambda / Node.js development environment
+## 7 steps to have a local AWS Lambda / Node.js development environment
 
-### Install Node.js [Check here](https://nodejs.org/en/)
+### Install Node.js 
+
+[Check here](https://nodejs.org/en/)
+
 ### Install aws-sdk
 
     npm install aws-sdk
 
-### Configure
+### Configure aws-sdk
 
 Create a credentials file at ~/.aws/credentials on Mac/Linux or C:\Users\USERNAME\.aws\credentials on Window.
 
@@ -17,7 +20,7 @@ Create a credentials file at ~/.aws/credentials on Mac/Linux or C:\Users\USERNAM
 
     git clone https://github.com/cloudwayio/Lambda-NodeJS-Bootstrap.git
 
-You will see a folder and a readme file.
+You will see a folder named ```bootstrap```  and a readme file.
     
     $ cd Nambda-NodeJS-Bootstrap
     $ ls -1
@@ -46,7 +49,7 @@ You may modify ```MyFunction.js``` and implement your own function. If you want 
 
 You can modify ```event.js``` in order to send sample events to your lambda function.
 
-Use ```npm install``` to install required modules
+Use ```npm install``` to install required modules. ```async``` module is already installed, as it is almost a must.
 
 ### Packing
 
@@ -58,5 +61,5 @@ Use ```npm install``` to install required modules
       adding: node_modules/async/lib/async.js (deflated 80%)
       adding: MyFunction.js (deflated 43%)
 
-This creates a ```zip``` file which can be uploaded to AWS Lambda
+This creates a ```zip``` file which can be uploaded to AWS Lambda.
 
