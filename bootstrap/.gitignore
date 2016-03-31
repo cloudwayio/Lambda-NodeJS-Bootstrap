@@ -1,4 +1,4 @@
-./node_modules/aws-sdk*
+node_modules/
 context.js
 event.js
 lambda.js
