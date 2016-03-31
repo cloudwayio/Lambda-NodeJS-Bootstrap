@@ -1,6 +1,6 @@
 ## 7 steps to have a local AWS Lambda / Node.js development environment
 
-### Install Node.js 
+### Install Node.js
 
 [Check here](https://nodejs.org/en/)
 
@@ -21,7 +21,7 @@ Create a credentials file at ~/.aws/credentials on Mac/Linux or C:\Users\USERNAM
     git clone https://github.com/cloudwayio/Lambda-NodeJS-Bootstrap.git
 
 You will see a folder named ```bootstrap```  and a readme file.
-    
+
     $ cd Nambda-NodeJS-Bootstrap
     $ ls -1
     bootstrap
@@ -35,7 +35,7 @@ You will see a folder named ```bootstrap```  and a readme file.
 
 Run ```lambda.js``` which wraps lambda function implemented in ```MyFunction.js``` and passes ```context``` and ```event``` objects.
 
-    $ node lambda.js 
+    $ node lambda.js
     Loading Lambda Function (v1234)
     {
         "key1": "value1",
@@ -45,6 +45,11 @@ Run ```lambda.js``` which wraps lambda function implemented in ```MyFunction.js`
     }
     key1: value1
     -> CONTEXT SUCEEED:  Yay :)
+
+If you want to use different profiles you may use `run.sh` which will use a specific profile before calling `node lambda.js`. Edit `run.sh` before you run it to be sure it has correct profile.
+
+    #!/bin/bash
+    AWS_PROFILE=my-profile node lambda.js
 
 ### Developing New AWS Lambda Functions
 
@@ -56,7 +61,7 @@ Use ```npm install``` to install required modules. ```async``` module is already
 
 ### Packing and Deploying Lambda Function
 
-    $ sh package.sh 
+    $ sh package.sh
       adding: node_modules/ (stored 0%)
       adding: node_modules/async/ (stored 0%)
       adding: node_modules/async/package.json (deflated 61%)
